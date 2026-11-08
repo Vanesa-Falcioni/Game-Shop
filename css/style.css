@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* base mobile first */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #222222;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 18px 20px;
+  gap: 12px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  min-width: 0;
+}
+
+header .logo > img {
+  width: auto;
+  height: 35px;
+}
+
+header h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 0 10px;
+}
+
+/* el carrito NO se ve */
+.cart {
+  display: none;
+}
+
+.cart:hover {
+  color: #ffffff;
+}
+
+/* se ve la hamburguesa */
+.hamb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: transparent;
+  border: 0;
+  padding: 8px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* menu */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: none;
+  width: 100%;
+  flex-basis: 100%;
+  order: 4;
+}
+
+nav.open {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
+  text-align: center;
+}
+
+nav ul li {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 12px 8px;
+}
+
+nav ul li a::before {
+  margin-right: 10px;
+  font: var(--fa-font-solid);
+  content: "\f11b";
+}
+/* primera seccion: slide */
+.slide {
+  background: url("../img/Fondo.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 380px;
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-slide h2 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0 auto 20px;
+  line-height: 1.3;
+}
+
+.contenido-slide h2 span {
+  color: #d01418;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.btn-comprar {
+  display: inline-block;
+  background-color: #d01418;
+  color: #ffffff;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #b00d11;
+}
+/* seccion productos */
+.product {
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.product h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.contenedor-productos {
+  display: grid;
+  /* 1 columna en mobile */
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.tarjeta-producto {
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px 15px;
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+/* seccion banners */
+.section-banner {
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.section-banner h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 400;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.contenedor-banners {
+  display: grid;
+  /* 1 columna en mobile */
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.banner-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  display: flex;
+}
+
+.banner-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+/* footer */
+.footer {
+  background-color: #222222;
+  color: #ffffff;
+  padding-top: 25px;
+}
+
+.contenido-footer {
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+/* Logo */
+.contenido-footer .logo {
+  max-width: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-footer .logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Redes Sociales */
+.redes-footer h3 {
+  font-size: 22px;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.iconos-redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.iconos-redes a {
+  font-size: 28px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.iconos-redes a:hover {
+  opacity: 0.8;
+}
+
+/* Colores de redes */
+.iconos-redes a[aria-label="Twitter"] {
+  color: #1da1f2;
+}
+
+.iconos-redes a[aria-label="Facebook"] {
+  color: #1877f2;
+}
+
+.iconos-redes a[aria-label="Instagram"] {
+  color: #e1306c;
+}
+
+/* Copy gris inferior */
+.footer .copy {
+  background-color: #d9d9d9;
+  color: #000000;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 11px;
+}
+
+.footer .copy p {
+  margin: 0;
+}
+
+/* escritorio */
+
+@media (min-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    padding: 30px 35px;
+    gap: 16px;
+  }
+
+  header .logo > img {
+    height: 40px;
+  }
+
+  header h1 {
+    font-size: 25px;
+    margin-left: 20px;
+  }
+
+  /* escondo el menu hamburguesa */
+  .hamb {
+    display: none;
+  }
+
+  /* muestro el menu horizontal */
+  nav {
+    display: flex;
+    width: auto;
+    flex-basis: auto;
+    /* deshace el order 4 que traia */
+    order: unset;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    width: auto;
+  }
+
+  nav ul li a {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  /* se ve el carrito en escritorio */
+  .cart {
+    display: inline-block;
+    margin-left: 0;
+    color: red;
+    font-size: 25px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+  }
+
+  /* primera seccion: slide */
+  .slide {
+    padding: 70px 20px;
+    min-height: 500px;
+  }
+  .contenido-slide {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contenido-slide h2 {
+    font-size: 52px;
+  }
+
+  .contenido-slide h2 span {
+    font-size: 52px;
+    margin-bottom: 35px;
+  }
+
+  .btn-comprar {
+    padding: 12px 48px;
+    font-size: 25px;
+  }
+  /* seccion productos */
+  .product {
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .contenedor-productos {
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .tarjeta-producto {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  /* seccion banners */
+  .section-banner {
+    padding: 50px 20px;
+  }
+
+  .contenedor-banners {
+    /* 2 columnas lado a lado */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  /* footer */
+  .contenido-footer {
+    height: 216px;
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .contenido-footer .logo {
+    justify-content: flex-start;
+    max-width: 200px;
+  }
+
+  .redes-footer {
+    text-align: right;
+  }
+
+  .iconos-redes {
+    justify-content: flex-end;
+  }
+}

@@ -363,12 +363,8 @@ nav ul li a::before {
     text-align: center;
   }
 
-  .contenido-slide h2 {
-    font-size: 52px;
-  }
-
   .contenido-slide h2 span {
-    font-size: 52px;
+    font-size: 48px;
     margin-bottom: 35px;
   }
 
